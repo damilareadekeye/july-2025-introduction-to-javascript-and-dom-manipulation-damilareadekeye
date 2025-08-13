@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PLP 5 — JavaScript Fundamentals</title>
+    <meta name="description" content="Practice JS basics: variables, conditionals, functions, loops, and DOM." />
+    <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header">
+        <div class="container">
+            <h1>JavaScript Fundamentals — PLP 5</h1>
+            <nav aria-label="Page actions" class="actions">
+                <button id="themeBtn" type="button" class="btn">Toggle Theme</button>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main" class="container">
+        <section aria-labelledby="part1-title" class="card">
+            <h2 id="part1-title">Part 1: JS Basics — Variables, Conditionals</h2>
+            <p>Enter your name and age. We will greet you and tell you if you are an adult.</p>
+            <form id="basicForm" class="grid">
+                <label>
+                    <span>Name</span>
+                    <input id="nameInput" name="name" type="text" placeholder="Ada" required />
+                </label>
+                <label>
+                    <span>Age</span>
+                    <input id="ageInput" name="age" type="number" min="0" placeholder="21" required />
+                </label>
+                <button id="evaluateBtn" type="submit" class="btn btn--primary">Evaluate</button>
+            </form>
+            <output id="evalResult" class="output" aria-live="polite"></output>
+        </section>
+
+        <section aria-labelledby="part2-title" class="card">
+            <h2 id="part2-title">Part 2: Functions — Reusable Logic</h2>
+            <div class="grid">
+                <label>
+                    <span>Price (₦)</span>
+                    <input id="priceInput" type="number" min="0" step="0.01" placeholder="1500" />
+                </label>
+                <label>
+                    <span>Quantity</span>
+                    <input id="qtyInput" type="number" min="0" step="1" placeholder="3" />
+                </label>
+                <button id="calcBtn" type="button" class="btn">Calculate Total</button>
+            </div>
+            <output id="totalResult" class="output" aria-live="polite"></output>
+
+            <div class="grid">
+                <label>
+                    <span>Format Name</span>
+                    <input id="formatInput" type="text" placeholder="chiOMA okafor" />
+                </label>
+                <button id="formatBtn" type="button" class="btn">Format</button>
+            </div>
+            <output id="formatResult" class="output" aria-live="polite"></output>
+        </section>
+
+        <section aria-labelledby="part3-title" class="card">
+            <h2 id="part3-title">Part 3: Loops — Repetition and Iteration</h2>
+            <p>We will render a list using a loop and run a simple countdown.</p>
+            <div class="grid">
+                <div>
+                    <h3>Fruits (rendered with forEach)</h3>
+                    <ul id="fruitsList"></ul>
+                </div>
+                <div>
+                    <h3>Countdown (while loop)</h3>
+                    <button id="countdownBtn" type="button" class="btn">Start 5 → 0</button>
+                    <div id="countdownOut" class="output"></div>
+                </div>
+            </div>
+        </section>
+
+        <section aria-labelledby="part4-title" class="card">
+            <h2 id="part4-title">Part 4: DOM — Events & Dynamic Content</h2>
+            <p>These buttons demonstrate selecting, updating, toggling classes, and creating elements.</p>
+            <div class="grid">
+                <button id="toggleBtn" type="button" class="btn">Toggle Extra Note</button>
+                <button id="addNoteBtn" type="button" class="btn">Add New Note</button>
+            </div>
+            <p id="toggleTarget" class="muted">This note can be toggled on and off.</p>
+            <div id="notes" class="notes"></div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <small>&copy; <time datetime="2025">2025</time> JS Fundamentals Demo</small>
+        </div>
+    </footer>
+
+    <script src="./script.js" defer></script>
+</body>
+
+</html>
